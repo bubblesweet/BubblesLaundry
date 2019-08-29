@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Login Page</title>
+<title>Login Error Page</title>
 </head>
 <body bgcolor="bfff00">
 	<form method="post" action="LoginValidation">
@@ -25,6 +25,9 @@
 				<option value="supplier">Supplier</option>
 				<option value="wholesaler">Wholesaler</option>
 				</select></td>
+			</tr>
+			<tr>
+			<td>Your Information is Incorrect</td>
 			</tr>
 			<tr>
 				<td></td>
