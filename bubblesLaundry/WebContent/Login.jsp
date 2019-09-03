@@ -20,10 +20,10 @@
 			<tr>
 				<td>Role:</td>
 				<td><select name="role" size="1">
-				<option value="customer">Customer</option>
-				<option value="retailer">Retailer</option>
-				<option value="supplier">Supplier</option>
-				<option value="wholesaler">Wholesaler</option>
+				<option value="Customer">Customer</option>
+				<option value="Retailer">Retailer</option>
+				<option value="Supplier">Supplier</option>
+				<option value="Wholesaler">Wholesaler</option>
 				</select></td>
 			</tr>
 			<tr>
