@@ -23,7 +23,7 @@
 			<tr>
 				<td>Role:</td>
 				<td><select name="role" size="1">
-						<option value="Customer">Customer</option>
+						<option value="customer">Customer</option>
 						<option value="Retailer">Retailer</option>
 						<option value="Supplier">Supplier</option>
 						<option value="Wholesaler">Wholesaler</option>

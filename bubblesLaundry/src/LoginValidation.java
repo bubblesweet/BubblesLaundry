@@ -71,9 +71,9 @@ public class LoginValidation extends HttpServlet {
 				// creating connection with the database
 				Connection con = DriverManager.getConnection(
 						"jdbc:mysql://localhost:3306/BubbleLaundry?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",
-						"root", "8281");
+						"root", "password");
 				PreparedStatement ps = con
-						.prepareStatement("select * from Users where userName=? and password=? and role=?");
+						.prepareStatement("select * from members where userName=? and password=? and role=?");
 				ps.setString(1, username);
 				ps.setString(2, pass);
 				ps.setString(3, role);
