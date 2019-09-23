@@ -4,30 +4,31 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.bubblesLaundry.bean.MemberBean;
-import com.bubblesLaundry.dao.MemberDAO;
+import com.bubblesLaundry.dao.AdminDAO;
 
 /**
  * Servlet implementation class MemberHandler
  */
-//@WebServlet("/MemberHandler")
+@WebServlet("/MemberHandler")
 public class MemberHandler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static String INSERT = "/user.jsp";
-	private static String Edit = "/edit.jsp";
-	private static String UserRecord = "/listUser.jsp";
-	private MemberDAO dao;
+	private static String INSERT = "/AddMember.jsp";
+	private static String Edit = "/EditMember.jsp";
+	private static String UserRecord = "/ListAllMembers.jsp";
+	private AdminDAO admin_dao;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
 	public MemberHandler() {
 		super();
-		dao = new MemberDAO();
+		admin_dao = new AdminDAO();
 	}
 
 	/**
@@ -47,18 +48,18 @@ public class MemberHandler extends HttpServlet {
 			member.setM_id(id);
 			member.setM_username(request.getParameter("m_username"));
 			member.setM_password(request.getParameter("m_password"));
-			dao.addUser(member);
+			admin_dao.addUser(member);
 			redirect = UserRecord;
-			request.setAttribute("members", dao.getAllMembers());
+			request.setAttribute("members", admin_dao.getAllMembers());
 			System.out.println("Record Added Successfully");
 		}
 
 		else if (action.equalsIgnoreCase("delete")) {
 			String memberId = request.getParameter("memberId");
 			int uid = Integer.parseInt(memberId);
-			dao.removeMember(uid);
+			admin_dao.removeMember(uid);
 			redirect = UserRecord;
-			request.setAttribute("members", dao.getAllMembers());
+			request.setAttribute("members", admin_dao.getAllMembers());
 			System.out.println("Record Deleted Successfully");
 		}
 
@@ -73,7 +74,7 @@ public class MemberHandler extends HttpServlet {
 			member.setM_id(uid);
 			member.setM_username(request.getParameter("m_username"));
 			member.setM_password(request.getParameter("m_password"));
-			dao.editMember(member);
+			admin_dao.editMember(member);
 			request.setAttribute("member", member);
 			redirect = UserRecord;
 			System.out.println("Record updated Successfully");
@@ -81,7 +82,7 @@ public class MemberHandler extends HttpServlet {
 
 		else if (action.equalsIgnoreCase("listMembers")) {
 			redirect = UserRecord;
-			request.setAttribute("members", dao.getAllMembers());
+			request.setAttribute("members", admin_dao.getAllMembers());
 		}
 
 		else {

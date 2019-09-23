@@ -9,13 +9,12 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-		<description></description>
-		<servlet-name>MemberHandler</servlet-name>
-		<servlet-class>com.bubblesLaundry.servlet.handler.MemberHandler</servlet-class>
+ 	<servlet>
+		<servlet-name>LoginValidation</servlet-name>
+		<servlet-class>com.bubblesLaundry.servlet.handler.LoginValidation</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>MemberHandler</servlet-name>
-		<url-pattern>/MemberHandler</url-pattern>
+		<servlet-name>LoginValidation</servlet-name>
+		<url-pattern>/LoginValidation/*</url-pattern>
 	</servlet-mapping>
 </web-app>

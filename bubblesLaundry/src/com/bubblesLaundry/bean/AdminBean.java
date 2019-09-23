@@ -10,6 +10,20 @@ public class AdminBean {
 	private String a_password;
 
 	/**
+	 * @return the a_id
+	 */
+	public int getA_id() {
+		return a_id;
+	}
+
+	/**
+	 * @param a_id the a_id to set
+	 */
+	public void setA_id(int a_id) {
+		this.a_id = a_id;
+	}
+
+	/**
 	 * @return the a_username
 	 */
 	public String getA_username() {
@@ -36,12 +50,4 @@ public class AdminBean {
 	public void setA_password(String a_password) {
 		this.a_password = a_password;
 	}
-
-	/**
-	 * @return the a_id
-	 */
-	public int getA_id() {
-		return a_id;
-	}
-
 }

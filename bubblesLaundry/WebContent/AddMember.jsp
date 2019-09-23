@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@ page import="com.bubblesLaundry.dao.MemberDAO"%>
+<%@ page import="com.bubblesLaundry.dao.AdminDAO"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -9,7 +9,7 @@
 </head>
 <body>
 <%
-	MemberDAO dao = new MemberDAO();
+	AdminDAO dao = new AdminDAO();
 %>
 <form method="POST" action='MemberHandler' name="frmAddUser"><input
 	type="hidden" name="action" value="insert" />
