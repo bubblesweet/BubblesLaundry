@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>My Reservations</title>
 </head>
 <body bgcolor="8cbcd0">
-
+<h1>No Reservations Found!</h1>
 </body>
 </html>

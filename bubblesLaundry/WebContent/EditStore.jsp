@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Edit Store</title>
 </head>
-<body>
+<body bgcolor="8cbcd0">
 	<%
 	StoreBean store = new StoreBean();
 	%>

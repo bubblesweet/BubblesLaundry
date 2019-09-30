@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Add New Machine</title>
 </head>
-<body>
+<body bgcolor="8cbcd0">
 <%
 	MachineDAO dao = new MachineDAO();
 %>

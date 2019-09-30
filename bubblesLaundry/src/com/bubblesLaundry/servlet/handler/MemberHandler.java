@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.bubblesLaundry.bean.MemberBean;
 import com.bubblesLaundry.dao.AdminDAO;
+import com.bubblesLaundry.dao.StoreDAO;
 
 /**
  * Servlet implementation class MemberHandler
@@ -21,7 +22,10 @@ public class MemberHandler extends HttpServlet {
 	private static String INSERT = "/AddMember.jsp";
 	private static String Edit = "/EditMember.jsp";
 	private static String UserRecord = "/ListAllMembers.jsp";
+	private static String StoreRecord = "/StoreSelection.jsp";
+	private static String Reservations = "/ListReservations.jsp";
 	private AdminDAO admin_dao;
+	private StoreDAO store_dao;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -29,6 +33,7 @@ public class MemberHandler extends HttpServlet {
 	public MemberHandler() {
 		super();
 		admin_dao = new AdminDAO();
+		store_dao = new StoreDAO();
 	}
 
 	/**
@@ -85,7 +90,15 @@ public class MemberHandler extends HttpServlet {
 			request.setAttribute("members", admin_dao.getAllMembers());
 		}
 
-		else {
+		else if (action.equalsIgnoreCase("listStores")) {
+			redirect = StoreRecord;
+			request.setAttribute("stores", store_dao.getAllStores());
+		}
+
+		else if (action.equalsIgnoreCase("listReservation")) {
+			redirect = Reservations;
+			// request.setAttribute("stores", store_dao.getAllStores());
+		} else {
 			redirect = INSERT;
 		}
 

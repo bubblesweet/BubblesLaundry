@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>All Members</title>
 </head>
-<body>
+<body bgcolor="8cbcd0">
 	<%
 		AdminDAO dao = new AdminDAO();
 		List<MemberBean> memberList = dao.getAllMembers();

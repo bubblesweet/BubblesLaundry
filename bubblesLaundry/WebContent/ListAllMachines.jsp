@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>All Machines</title>
 </head>
-<body>
+<body bgcolor="8cbcd0">
 	<%
 	MachineDAO dao = new MachineDAO();
 		List<MachineBean> machineList = dao.getAllMachines();

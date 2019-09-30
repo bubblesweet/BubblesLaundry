@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Login Successful</title>
 </head>
-<body bgcolor="bfff00">
+<body bgcolor="8cbcd0">
 	<h1>Login Successful</h1>
 	<br>
 	<h3>Welcome Admin!</h3>

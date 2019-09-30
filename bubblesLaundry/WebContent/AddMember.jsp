@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Add New Member</title>
 </head>
-<body>
+<body bgcolor="8cbcd0">
 <%
 	AdminDAO dao = new AdminDAO();
 %>

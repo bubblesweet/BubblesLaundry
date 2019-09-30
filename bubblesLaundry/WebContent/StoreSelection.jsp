@@ -33,18 +33,12 @@
 			<td><%=store.getS_address()%></td>
 			<td><%=store.getS_timings()%></td>
 			<td><a
-				href="StoreHandler?action=editform&storeId=<%=store.getS_id()%>">Update</a></td>
-			<td><a
-				href="StoreHandler?action=delete&storeId=<%=store.getS_id()%>">Delete</a></td>
-
+				href="StoreHandler?action=editform&storeId=<%=store.getS_id()%>">Select</a></td>
 		</tr>
 		<%
 			}
 			//}
 		%>
 	</table>
-	<p>
-		<a href="StoreHandler?action=insert">Add Store</a>
-	</p>
 </body>
 </html>

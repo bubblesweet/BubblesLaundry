@@ -15,7 +15,7 @@
 <meta http-equiv="Content-Type" charset="UTF-8">
 <title>Add Store Details</title>
 </head>
-<body>
+<body bgcolor="8cbcd0">
 	<%
 		StoreDAO dao = new StoreDAO();
 	%><form method="POST" action='StoreHandler' name="frmAddStore">

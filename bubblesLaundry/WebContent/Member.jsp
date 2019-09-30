@@ -6,13 +6,16 @@
 <meta charset="UTF-8">
 <title>Login Successful</title>
 </head>
-<body bgcolor="bfff00">
+<body bgcolor="8cbcd0">
 	<h1>Login Successful</h1>
 	<br>
 	<h3>Welcome Member!</h3>
 	<br>
-	<h3>
-		Current Date:
-		<%=(new java.util.Date()).toLocaleString()%></h3>
+	<p>
+		<a href="MemberHandler?action=listStores">Select Store</a>
+	</p>
+	<p>
+		<a href="MemberHandler?action=listReservation">Management Reservation</a>
+	</p>
 </body>
 </html>

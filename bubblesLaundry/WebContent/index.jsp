@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome to Bubbles Laundry</title>
 </head>
-<body bgcolor="bfff00">
+<body bgcolor="8cbcd0">
 <form method="POST" action='LoginValidation' name="frmLogin"><input
 	type="hidden" name="action" value="login" />
 <p><b>Welcome to Bubbles Laundry</b></p>

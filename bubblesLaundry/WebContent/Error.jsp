@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Login Error Page</title>
 </head>
-<body bgcolor="bfff00">
+<body bgcolor="8cbcd0">
 	<form method="post" action="LoginValidation">
 		<table>
 			<tr>
@@ -23,10 +23,8 @@
 			<tr>
 				<td>Role:</td>
 				<td><select name="role" size="1">
-						<option value="Customer">Customer</option>
-						<option value="Retailer">Retailer</option>
-						<option value="Supplier">Supplier</option>
-						<option value="Wholesaler">Wholesaler</option>
+						<option value="member">Member</option>
+						<option value="admin">Admin</option>
 				</select></td>
 			</tr>
 			<tr>
