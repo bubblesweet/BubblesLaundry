@@ -3,6 +3,22 @@ package com.bubblesLaundry.bean;
 public class MachineBean {
 	private int machine_id;
 	private int store_id;
+	private String store_location;
+
+	/**
+	 * @return the store_location
+	 */
+	public String getStore_location() {
+		return store_location;
+	}
+
+	/**
+	 * @param store_location the store_location to set
+	 */
+	public void setStore_location(String store_location) {
+		this.store_location = store_location;
+	}
+
 	private String maintenance;
 
 	/**

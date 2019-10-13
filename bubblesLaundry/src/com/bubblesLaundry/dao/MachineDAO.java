@@ -48,17 +48,44 @@ public class MachineDAO {
 		return newMachineId;
 	}
 
-	public List getAllMachines() {
-		List machines = new ArrayList();
+	public List<MachineBean> getAllMachines() {
+		List<MachineBean> machines = new ArrayList<MachineBean>();
+
 		try {
-			String sql = "SELECT * FROM machines";
+			String sql = "SELECT m.machineID, m.storeID, m.maintenance, s.s_location FROM machines m INNER JOIN stores s ON m.storeID=s.storeID";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
+
 			while (rs.next()) {
 				MachineBean machineBean = new MachineBean();
 				machineBean.setMachine_id(rs.getInt("machineID"));
 				machineBean.setStore_id(rs.getInt("storeID"));
 				machineBean.setMaintenance(rs.getString("maintenance"));
+				machineBean.setStore_location(rs.getString("s_location"));
+				machines.add(machineBean);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return machines;
+	}
+
+	public List<MachineBean> getMachinesByStoreID(int Store_ID) {
+		List<MachineBean> machines = new ArrayList<MachineBean>();
+
+		try {
+			String sql = "SELECT m.machineID, m.storeID, m.maintenance, s.s_location FROM machines m INNER JOIN stores s ON m.storeID=s.storeID where m.storeID = ?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, Store_ID);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				MachineBean machineBean = new MachineBean();
+				machineBean.setMachine_id(rs.getInt("machineID"));
+				machineBean.setStore_id(rs.getInt("storeID"));
+				machineBean.setMaintenance(rs.getString("maintenance"));
+				machineBean.setStore_location(rs.getString("s_location"));
 				machines.add(machineBean);
 			}
 		} catch (SQLException e) {

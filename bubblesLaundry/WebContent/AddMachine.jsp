@@ -25,7 +25,7 @@
 		<td><input type="text" name="store_id" /></td>
 	</tr>
 	<tr>
-		<td>Maitenance?</td>
+		<td>Status</td>
 		<td><input type="text" name="maintenance" /></td>
 	</tr>
 	<tr>

@@ -68,6 +68,23 @@ public class StoreDAO {
 		return storeBean;
 	}
 
+	public String getStoreIdFromMachineId(int machineID) {
+		String store_ID = "";
+		try {
+			String sql = "SELECT s.storeID FROM stores s INNER JOIN machines m ON m.storeID=s.storeID where m.machineID = ?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, machineID);
+			ResultSet rs = ps.executeQuery();
+			if (rs.next()) {
+				store_ID = String.valueOf(rs.getInt("storeID"));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return store_ID;
+	}
+
 	public String getNewStoreID() {
 		String newStoreId = "";
 		try {

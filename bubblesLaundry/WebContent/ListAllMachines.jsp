@@ -17,18 +17,15 @@
 	<table border="1">
 		<tr>
 			<th>Machine Id</th>
-			<th>Store Id</th>
-			<th>Maintenance?</th>
+			<th>Store Location</th>
+			<th>Status</th>
 		</tr>
 		<tr>
 			<%
-				/*while(itr.hasNext())
-				 {
-				 System.out.println(user.getId());*/
 				for (MachineBean machine : machineList) {
 			%>
 			<td><%=machine.getMachine_id()%></td>
-			<td><%=machine.getStore_id()%></td>
+			<td><%=machine.getStore_location()%></td>
 			<td><%=machine.getMaintenance()%></td>
 			<td><a
 				href="MachineHandler?action=editform&machineId=<%=machine.getMachine_id()%>">Update</a></td>
@@ -42,7 +39,7 @@
 		%>
 	</table>
 	<p>
-		<a href="MachineHandler?action=insert">Add Machiner</a>
+		<a href="MachineHandler?action=insert">Add Machine</a>
 	</p>
 </body>
 </html>

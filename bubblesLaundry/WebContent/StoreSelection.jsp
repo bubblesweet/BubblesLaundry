@@ -33,7 +33,7 @@
 			<td><%=store.getS_address()%></td>
 			<td><%=store.getS_timings()%></td>
 			<td><a
-				href="StoreHandler?action=editform&storeId=<%=store.getS_id()%>">Select</a></td>
+				href="StoreHandler?action=selectStore&storeId=<%=store.getS_id()%>">Select</a></td>
 		</tr>
 		<%
 			}

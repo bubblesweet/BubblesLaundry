@@ -20,7 +20,10 @@ public class StoreHandler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static String INSERT = "/AddStore.jsp";
 	private static String Edit = "/EditStore.jsp";
+	private static String AddReservation = "/AddReservation.jsp";
 	private static String StoreRecord = "/ListAllStores.jsp";
+	private static String StoreLanding = "/Store.jsp";
+	private static String ConfirmReservation = "/ConfirmReservation.jsp";
 	private StoreDAO store_dao;
 
 	/**
@@ -60,7 +63,33 @@ public class StoreHandler extends HttpServlet {
 			redirect = Edit;
 		}
 
+		else if (action.equalsIgnoreCase("addReservation")) {
+			redirect = AddReservation;
+		}
+
+		else if (action.equalsIgnoreCase("bookReservation")) {
+
+			String machineId = request.getParameter("machineId");
+			int mId = Integer.parseInt(machineId);
+			StoreBean store = new StoreBean();
+			store.setS_id(mId);
+			store.setS_location(request.getParameter("s_location"));
+			store.setS_address(request.getParameter("s_address"));
+			String timing = request.getParameter("start_time");
+			timing = timing + " to " + request.getParameter("end_time");
+			store.setS_timings(timing);
+			store_dao.editStore(store);
+			request.setAttribute("store", store);
+			redirect = ConfirmReservation;
+			System.out.println("Record updated Successfully");
+		}
+
+		else if (action.equalsIgnoreCase("selectStore")) {
+			redirect = StoreLanding;
+		}
+
 		else if (action.equalsIgnoreCase("edit")) {
+
 			String storeId = request.getParameter("storeId");
 			int uid = Integer.parseInt(storeId);
 			StoreBean store = new StoreBean();

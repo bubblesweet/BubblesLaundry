@@ -15,7 +15,7 @@
 		<a href="MemberHandler?action=listStores">Select Store</a>
 	</p>
 	<p>
-		<a href="MemberHandler?action=listReservation">Management Reservation</a>
+		<a href="MemberHandler?action=listReservation">Manage Reservation</a>
 	</p>
 </body>
 </html>
