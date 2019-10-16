@@ -14,8 +14,8 @@ public class ConnectionProvider {
 			try {
 
 				String driver = "com.mysql.cj.jdbc.Driver";
-				String url = "jdbc:mysql://localhost:3306/BubbleLaundry?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC";
-				String user = "root";
+				String url = "jdbc:mysql://testdb.cluster-c6eqgqq07cjk.us-east-1.rds.amazonaws.com:3306/testdb";
+				String user = "admin";
 				String password = "password";
 				Class.forName(driver);
 				con = DriverManager.getConnection(url, user, password);
