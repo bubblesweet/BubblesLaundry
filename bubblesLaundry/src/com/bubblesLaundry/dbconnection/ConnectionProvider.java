@@ -14,7 +14,7 @@ public class ConnectionProvider {
 			try {
 
 				String driver = "com.mysql.cj.jdbc.Driver";
-				String url = "jdbc:mysql://testdb.cluster-c6eqgqq07cjk.us-east-1.rds.amazonaws.com:3306/testdb";
+				String url = "jdbc:mysql://testdb2.cluster-c6eqgqq07cjk.us-east-1.rds.amazonaws.com:3306/bubblesdb";
 				String user = "admin";
 				String password = "password";
 				Class.forName(driver);
